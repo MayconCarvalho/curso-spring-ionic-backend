@@ -1,5 +1,6 @@
 package com.maycon.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.maycon.cursomc.domain.enums.EstadoPagamento;
 
 import javax.persistence.*;
@@ -14,6 +15,7 @@ public abstract class Pagamento implements Serializable {
     private Integer id;
     private Integer estado;
 
+    @JsonBackReference
     @OneToOne
     @JoinColumn(name = "pedido_id")
     @MapsId // anotação para fazer o ID da classe Pagamento ser igual ao ID da classe Pedido
