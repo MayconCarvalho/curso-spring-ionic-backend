@@ -1,5 +1,11 @@
 # cursomc
 
+## Diagrama proposto da aplicação
+
+![Diagrama da aplicacao](./diagrama.png)
+
+## Anotações importantes do projeto
+
 ### Proteção para referência cíclica na serialização Json:
 @JsonManagedReference  
 Lado do relacionamento que deseja retornar objetos
