@@ -20,7 +20,7 @@ Usando as anotações acima, é criado uma Tabela Telefone no banco, sem uma pri
 Essa tabela leva o ID da classe que tem ela como atribute e uma string telefone como coluna
 
 ### Mapeamento one to one
-```
+```java
     class Pagamento {
         @OneToOne
         @JoinColumn(name = "pedido_id")
@@ -30,3 +30,22 @@ Essa tabela leva o ID da classe que tem ela como atribute e uma string telefone 
 ```
 
 Faz com que o ID da classe Pagamento ser igual ao ID da classe Pedido
+
+### Criando chave primaria composta  
+
+Classe que tem como atributo uma chave primária composta
+```java
+    public class ItemPedido implements Serializable {
+    
+        @EmbeddedId
+        private ItemPedidoPK id = new ItemPedidoPK();
+    
+    }
+```
+
+Anotação usada para criar uma chave primaria composta
+```java
+    @Embeddable // sub tipo de classe
+    public class ItemPedidoPK implements Serializable {
+    }
+```
