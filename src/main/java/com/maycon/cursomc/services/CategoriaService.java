@@ -1,6 +1,7 @@
 package com.maycon.cursomc.services;
 
 import com.maycon.cursomc.domain.Categoria;
+import com.maycon.cursomc.domain.dto.CategoriaDTO;
 import com.maycon.cursomc.repositories.CategoriaRepository;
 import com.maycon.cursomc.services.Exception.ObjectNotFoundException;
 import com.maycon.cursomc.services.Exception.DataIntegrityException;
@@ -53,5 +54,9 @@ public class CategoriaService {
     public Page<Categoria> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
         PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
         return categoriaRepository.findAll(pageRequest);
+    }
+
+    public Categoria fromDTO(CategoriaDTO objDto) {
+        return new Categoria(objDto.getId(), objDto.getNome());
     }
 }
