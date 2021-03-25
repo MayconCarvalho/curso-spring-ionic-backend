@@ -55,3 +55,13 @@ Anotação usada para criar uma chave primaria composta
     public class ItemPedidoPK implements Serializable {
     }
 ```
+
+### Validacao com Bean Validation
+@Valid  
+Faz as validações do objeto passado pela requisição e retorna erro caso não esteja de acordo com as validações
+
+```java
+    public ResponseEntity<Void> update(@Valid @RequestBody CategoriaDTO objDto) {
+    // codigo
+    }
+```
