@@ -122,3 +122,18 @@ Código abaixo implementa a classe NomeValidator que é a classe que contém o c
 No qual:
 	* Nome: Nome da anotação. Ex: Nome
 	* Tipo: Classe que irá ser implementada
+
+### Pegando atributos de uma requisição
+
+```java
+	@Autowired
+    private HttpServletRequest request;
+
+
+    @SuppressWarnings(\"unchecked\")
+    Map<String, String> map = (Map<String, String>) request.getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
+
+    Integer uriId = Integer.parseInt(map.get("id"));
+```
+
+Objeto map contem a chave o valor de cada atributo. Ex: <"id", "2">
