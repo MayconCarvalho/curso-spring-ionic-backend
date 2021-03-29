@@ -1,7 +1,7 @@
 package com.maycon.cursomc.services.validation;
 
 import com.maycon.cursomc.domain.Cliente;
-import com.maycon.cursomc.domain.dto.ClienteNewDTO;
+import com.maycon.cursomc.dto.ClienteNewDTO;
 import com.maycon.cursomc.domain.enums.TipoCliente;
 import com.maycon.cursomc.repositories.ClienteRepository;
 import com.maycon.cursomc.resources.Exception.FieldMessage;

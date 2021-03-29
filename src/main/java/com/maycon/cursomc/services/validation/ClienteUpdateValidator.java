@@ -1,7 +1,7 @@
 package com.maycon.cursomc.services.validation;
 
 import com.maycon.cursomc.domain.Cliente;
-import com.maycon.cursomc.domain.dto.ClienteDTO;
+import com.maycon.cursomc.dto.ClienteDTO;
 import com.maycon.cursomc.repositories.ClienteRepository;
 import com.maycon.cursomc.resources.Exception.FieldMessage;
 import org.springframework.beans.factory.annotation.Autowired;

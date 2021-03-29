@@ -1,8 +1,8 @@
 package com.maycon.cursomc.resources;
 
 import com.maycon.cursomc.domain.Cliente;
-import com.maycon.cursomc.domain.dto.ClienteDTO;
-import com.maycon.cursomc.domain.dto.ClienteNewDTO;
+import com.maycon.cursomc.dto.ClienteDTO;
+import com.maycon.cursomc.dto.ClienteNewDTO;
 import com.maycon.cursomc.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

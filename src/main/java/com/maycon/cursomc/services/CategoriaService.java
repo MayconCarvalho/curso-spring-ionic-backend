@@ -1,7 +1,7 @@
 package com.maycon.cursomc.services;
 
 import com.maycon.cursomc.domain.Categoria;
-import com.maycon.cursomc.domain.dto.CategoriaDTO;
+import com.maycon.cursomc.dto.CategoriaDTO;
 import com.maycon.cursomc.repositories.CategoriaRepository;
 import com.maycon.cursomc.services.Exception.ObjectNotFoundException;
 import com.maycon.cursomc.services.Exception.DataIntegrityException;

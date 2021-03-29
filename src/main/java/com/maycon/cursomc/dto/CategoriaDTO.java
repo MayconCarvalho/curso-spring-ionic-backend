@@ -1,4 +1,4 @@
-package com.maycon.cursomc.domain.dto;
+package com.maycon.cursomc.dto;
 
 import com.maycon.cursomc.domain.Categoria;
 import org.hibernate.validator.constraints.Length;

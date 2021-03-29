@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class PedidoResource {
 
     @Autowired
-    private PedidoService PedidoService;
+    private PedidoService pedidoService;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Pedido> find(@PathVariable Integer id) {
-        Pedido obj = PedidoService.find(id);
+        Pedido obj = pedidoService.find(id);
         return ResponseEntity.ok().body(obj);
     }
 
