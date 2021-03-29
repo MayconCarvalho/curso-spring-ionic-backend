@@ -119,9 +119,9 @@ Código abaixo implementa a classe NomeValidator que é a classe que contém o c
 
 ```
 
-No qual:
-	- Nome: Nome da anotação. Ex: Nome  
-	- Tipo: Classe que irá ser implementada  
+No qual:  
+	— Nome: Nome da anotação. Ex: Nome  
+	— Tipo: Classe que irá ser implementada  
 
 ### Pegando atributos de uma requisição
 
