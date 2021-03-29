@@ -137,3 +137,17 @@ No qual:
 ```
 
 Objeto map contem a chave o valor de cada atributo. Ex: <"id", "2">
+
+
+### Anotation de classe de configuração
+@Configuration
+
+É uma classe que contém algum método ou informação que estará disponível no sistema e vai ser configurada no inicio da 
+execução da aplicação, usando o @Bean nos métodos de configuração. 
+
+### Anotation que acrescenta um atributo na classe por Json
+Classe abstrata  
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "@type")  
+
+Classe concreta  
+@JsonTypeName
