@@ -1,5 +1,6 @@
 package com.maycon.cursomc.services;
 
+import com.maycon.cursomc.domain.Cliente;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,10 @@ public class SMTPEmailService extends AbstractEmailService {
         LOGGER.info("Enviando email...");
         javaMailSender.send(msg);
         LOGGER.info("Email enviado");
+    }
+
+    @Override
+    public void sendNewPasswordEmail(Cliente cliente, String newPass) {
+
     }
 }
