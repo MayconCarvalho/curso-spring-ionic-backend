@@ -1,8 +1,6 @@
 package com.maycon.cursomc.resources;
 
-import com.maycon.cursomc.domain.Categoria;
 import com.maycon.cursomc.domain.Pedido;
-import com.maycon.cursomc.dto.CategoriaDTO;
 import com.maycon.cursomc.services.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
