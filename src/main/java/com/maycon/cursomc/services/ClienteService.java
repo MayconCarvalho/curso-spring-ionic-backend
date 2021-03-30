@@ -3,11 +3,14 @@ package com.maycon.cursomc.services;
 import com.maycon.cursomc.domain.Cidade;
 import com.maycon.cursomc.domain.Cliente;
 import com.maycon.cursomc.domain.Endereco;
+import com.maycon.cursomc.domain.enums.Perfil;
 import com.maycon.cursomc.dto.ClienteDTO;
 import com.maycon.cursomc.dto.ClienteNewDTO;
 import com.maycon.cursomc.domain.enums.TipoCliente;
 import com.maycon.cursomc.repositories.ClienteRepository;
 import com.maycon.cursomc.repositories.EnderecoRepository;
+import com.maycon.cursomc.security.UserSS;
+import com.maycon.cursomc.services.Exception.AuthorizationException;
 import com.maycon.cursomc.services.Exception.DataIntegrityException;
 import com.maycon.cursomc.services.Exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +38,11 @@ public class ClienteService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public Cliente find(Integer id) {
+        UserSS user = UserService.authenticated();
+        if (user == null || !user.hasRole(Perfil.ADMIN) && !id.equals(user.getId())) {
+            throw new AuthorizationException("Acesso negado");
+        }
+
         Optional<Cliente> optional = clienteRepository.findById(id);
         return optional.orElseThrow(() -> new ObjectNotFoundException(
                 "Objeto não encontrado! Id: " + id + ", Tipo: " + Cliente.class.getName()
